@@ -1,9 +1,11 @@
 {
     "app-id": "org.gnome.Connections",
     "runtime": "org.gnome.Platform",
-    "runtime-version": "3.36",
+    "runtime-version": "3.38beta",
     "sdk": "org.gnome.Sdk",
     "command": "connections",
+    "desktop-file-name-prefix" : "(Beta) ",
+    "tags" : ["devel", "development", "beta"],
     "finish-args": [
         "--share=network",
         "--share=ipc",
