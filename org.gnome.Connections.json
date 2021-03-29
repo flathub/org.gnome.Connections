@@ -1,9 +1,9 @@
 {
     "app-id": "org.gnome.Connections",
     "runtime": "org.gnome.Platform",
-    "runtime-version": "3.38",
+    "runtime-version": "40",
     "sdk": "org.gnome.Sdk",
-    "command": "connections",
+    "command": "gnome-connections",
     "finish-args": [
         "--share=network",
         "--share=ipc",
@@ -79,14 +79,14 @@
             ]
         },
         {
-            "name": "connections",
+            "name": "gnome-connections",
             "builddir": true,
             "buildsystem": "meson",
             "sources": [
                 {
                     "type": "git",
                     "url": "https://gitlab.gnome.org/gnome/connections.git",
-                    "branch": "gnome-3-38"
+                    "branch": "gnome-40"
                 }
             ]
         }
