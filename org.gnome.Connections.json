@@ -1,7 +1,7 @@
 {
     "app-id": "org.gnome.Connections",
     "runtime": "org.gnome.Platform",
-    "runtime-version": "40",
+    "runtime-version": "41",
     "sdk": "org.gnome.Sdk",
     "command": "gnome-connections",
     "finish-args": [
@@ -29,8 +29,8 @@
             "sources" : [
                 {
                     "type" : "archive",
-                    "url" : "https://download.gnome.org/sources/gtk-vnc/1.0/gtk-vnc-1.0.0.tar.xz",
-                    "sha256" : "a81a1f1a79ad4618027628ffac27d3391524c063d9411c7a36a5ec3380e6c080"
+                    "url" : "https://download.gnome.org/sources/gtk-vnc/1.2/gtk-vnc-1.2.0.tar.xz",
+                    "sha256" : "7aaf80040d47134a963742fb6c94e970fcb6bf52dc975d7ae542b2ef5f34b94a"
                 }
             ]
         },
@@ -55,13 +55,18 @@
                 "-DCMAKE_BUILD_TYPE=RelWithDebInfo",
                 "-DWITH_OPENH264=ON",
                 "-DCMAKE_INSTALL_PREFIX=/app",
-                "-DCMAKE_INSTALL_LIBDIR=lib"
+                "-DCMAKE_INSTALL_LIBDIR=lib",
+                "-DWITH_WAYLAND:BOOL=ON",
+                "-DCHANNEL_TSMF:BOOL=ON",
+                "-DWITH_FFMPEG:BOOL=ON",
+                "-DWITH_MANPAGES:BOOL=OFF",
+                "-DWITH_SERVER:BOOL=OFF"
             ],
             "sources" : [
                 {
                     "type" : "archive",
-                    "url" : "http://pub.freerdp.com/releases/freerdp-2.1.2.tar.gz",
-                    "sha256" : "f33bc6aef83b8ad3cbf2cdbc82dcfa980ec2b051efb72650f6f2365d55b79b8d"
+                    "url" : "https://pub.freerdp.com/releases/freerdp-2.4.0.tar.gz",
+                    "sha256" : "10ec9b06d74182b354ae288c8e621d94c0fb189b0c3b14a59867ab4c414c08b5"
                 }
             ]
         },
@@ -74,7 +79,8 @@
             "sources" : [
                 {
                     "type" : "git",
-                    "url" : "https://gitlab.gnome.org/gnome/gtk-frdp.git"
+                    "url" : "https://gitlab.gnome.org/gnome/gtk-frdp.git",
+                    "branch" : "gtk-frdp-0-1"
                 }
             ]
         },
@@ -86,7 +92,7 @@
                 {
                     "type": "git",
                     "url": "https://gitlab.gnome.org/gnome/connections.git",
-                    "branch": "gnome-40"
+                    "branch": "gnome-41"
                 }
             ]
         }
