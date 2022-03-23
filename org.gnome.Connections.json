@@ -1,13 +1,14 @@
 {
     "app-id": "org.gnome.Connections",
     "runtime": "org.gnome.Platform",
-    "runtime-version": "41",
+    "runtime-version": "42",
     "sdk": "org.gnome.Sdk",
     "command": "gnome-connections",
     "finish-args": [
         "--share=network",
         "--share=ipc",
         "--socket=fallback-x11",
+        "--socket=pulseaudio",
         "--socket=wayland"
     ],
     "cleanup": [
@@ -26,6 +27,9 @@
         {
             "name" : "gtk-vnc",
             "buildsystem" : "meson",
+            "config-opts" : [
+                "-Dpulseaudio=enabled"
+            ],
             "sources" : [
                 {
                     "type" : "archive",
@@ -80,7 +84,7 @@
                 {
                     "type" : "git",
                     "url" : "https://gitlab.gnome.org/gnome/gtk-frdp.git",
-                    "branch" : "gtk-frdp-0-1"
+                    "branch" : "a44d84ec687f41ad37e43697b28a018f65780780"
                 }
             ]
         },
@@ -92,7 +96,7 @@
                 {
                     "type": "git",
                     "url": "https://gitlab.gnome.org/gnome/connections.git",
-                    "branch": "gnome-41"
+                    "commit": "27541cbe59d836480b16ef37700be26fb2c1edad"
                 }
             ]
         }
