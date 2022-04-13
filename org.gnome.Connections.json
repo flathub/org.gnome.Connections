@@ -84,7 +84,7 @@
                 {
                     "type": "git",
                     "url": "https://gitlab.gnome.org/gnome/connections.git",
-                    "commit": "27541cbe59d836480b16ef37700be26fb2c1edad"
+                    "commit": "6ce30d5bff390055e73a97d272c4b777a87ecf65"
                 }
             ]
         }
