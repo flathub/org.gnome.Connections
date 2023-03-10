@@ -1,7 +1,7 @@
 {
     "app-id": "org.gnome.Connections",
     "runtime": "org.gnome.Platform",
-    "runtime-version": "42",
+    "runtime-version": "43",
     "sdk": "org.gnome.Sdk",
     "command": "gnome-connections",
     "finish-args": [
@@ -33,8 +33,8 @@
             "sources" : [
                 {
                     "type" : "archive",
-                    "url" : "https://download.gnome.org/sources/gtk-vnc/1.2/gtk-vnc-1.2.0.tar.xz",
-                    "sha256" : "7aaf80040d47134a963742fb6c94e970fcb6bf52dc975d7ae542b2ef5f34b94a"
+                    "url" : "https://download.gnome.org/sources/gtk-vnc/1.3/gtk-vnc-1.3.1.tar.xz",
+                    "sha256" : "512763ac4e0559d0158b6682ca5dd1a3bd633f082f5e4349d7158e6b5f80f1ce"
                 }
             ]
         },
@@ -44,12 +44,11 @@
             "buildsystem": "cmake-ninja",
             "builddir": true,
             "config-opts": [
-                "-DCMAKE_BUILD_TYPE=RelWithDebInfo",
                 "-DWITH_OPENH264=ON",
                 "-DCMAKE_INSTALL_PREFIX=/app",
                 "-DCMAKE_INSTALL_LIBDIR=lib",
                 "-DWITH_WAYLAND:BOOL=ON",
-                "-DCHANNEL_TSMF:BOOL=ON",
+                "-DCHANNEL_TSMF:BOOL=OFF",
                 "-DWITH_FFMPEG:BOOL=ON",
                 "-DWITH_MANPAGES:BOOL=OFF",
                 "-DWITH_SERVER:BOOL=OFF"
@@ -57,34 +56,19 @@
             "sources" : [
                 {
                     "type" : "archive",
-                    "url" : "https://pub.freerdp.com/releases/freerdp-2.4.0.tar.gz",
-                    "sha256" : "10ec9b06d74182b354ae288c8e621d94c0fb189b0c3b14a59867ab4c414c08b5"
-                }
-            ]
-        },
-        {
-            "name" : "gtk-frdp",
-            "config-opts" : [
-                "--libdir=/app/lib"
-            ],
-            "buildsystem" : "meson",
-            "sources" : [
-                {
-                    "type" : "git",
-                    "url" : "https://gitlab.gnome.org/gnome/gtk-frdp.git",
-                    "branch" : "a44d84ec687f41ad37e43697b28a018f65780780"
+                    "url" : "https://pub.freerdp.com/releases/freerdp-2.10.0.tar.gz",
+                    "sha256" : "a673d3fc21911dd9f196834f2f3a23c3ebc7e5e4deab2f7686fcec879279e2c1"
                 }
             ]
         },
         {
             "name": "gnome-connections",
-            "builddir": true,
             "buildsystem": "meson",
             "sources": [
                 {
                     "type": "git",
                     "url": "https://gitlab.gnome.org/gnome/connections.git",
-                    "commit": "6ce30d5bff390055e73a97d272c4b777a87ecf65"
+                    "commit": "d020a7c5720d0781ece336548665bd23fc09c852"
                 }
             ]
         }
