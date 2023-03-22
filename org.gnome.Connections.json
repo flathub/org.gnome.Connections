@@ -1,7 +1,7 @@
 {
     "app-id": "org.gnome.Connections",
     "runtime": "org.gnome.Platform",
-    "runtime-version": "43",
+    "runtime-version": "44",
     "sdk": "org.gnome.Sdk",
     "command": "gnome-connections",
     "finish-args": [
@@ -68,7 +68,7 @@
                 {
                     "type": "git",
                     "url": "https://gitlab.gnome.org/gnome/connections.git",
-                    "commit": "d020a7c5720d0781ece336548665bd23fc09c852"
+                    "commit": "277af58f39d663ee2fa48cc9f8f24702b462b711"
                 }
             ]
         }
