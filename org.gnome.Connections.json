@@ -68,7 +68,11 @@
                 {
                     "type": "git",
                     "url": "https://gitlab.gnome.org/gnome/connections.git",
-                    "commit": "277af58f39d663ee2fa48cc9f8f24702b462b711"
+                    "commit": "277af58f39d663ee2fa48cc9f8f24702b462b711",
+                    "x-checker-data": {
+                        "type": "git",
+                        "tag-pattern": "^([\\d.]+)$"
+                    }
                 }
             ]
         }
