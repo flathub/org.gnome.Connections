@@ -63,8 +63,8 @@
             "sources": [
                 {
                     "type": "archive",
-                    "url": "https://pub.freerdp.com/releases/freerdp-2.10.0.tar.gz",
-                    "sha256": "a673d3fc21911dd9f196834f2f3a23c3ebc7e5e4deab2f7686fcec879279e2c1"
+                    "url": "https://pub.freerdp.com/releases/freerdp-2.11.2.tar.gz",
+                    "sha256": "17e36553065cb59126f8fee987ec74783db50232b361574dac86b7a768dea3b4"
                 }
             ]
         },
