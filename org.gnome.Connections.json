@@ -91,12 +91,12 @@
                 {
                     "type": "git",
                     "url": "https://gitlab.gnome.org/gnome/connections.git",
-                    "commit": "3563cf21f086adaa68b5ed19fb7a25ec01e353ab",
+                    "commit": "e47237ed667cc7a2c0bdf70e92255835fffd7dca",
                     "x-checker-data": {
                         "type": "git",
                         "tag-pattern": "^([\\d.]+)$"
                     },
-                    "tag": "46.0"
+                    "tag": "47.0"
                 }
             ]
         }
