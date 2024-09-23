@@ -1,7 +1,7 @@
 {
     "app-id": "org.gnome.Connections",
     "runtime": "org.gnome.Platform",
-    "runtime-version": "46",
+    "runtime-version": "47",
     "sdk": "org.gnome.Sdk",
     "sdk-extensions": [
         "org.freedesktop.Sdk.Extension.vala"
@@ -45,6 +45,22 @@
                 }
             ]
         },
+        {
+            "name": "libfuse",
+            "buildsystem": "meson",
+            "config-opts": [
+                "-Dexamples=false",
+                "-Dutils=false"
+            ],
+            "sources": [
+                {
+                    "type": "git",
+                    "url": "https://github.com/libfuse/libfuse.git",
+                    "tag": "fuse-3.16.1",
+                    "commit": "1f0dfae4084577997291bb0e1b94aeff89a5e70f"
+                }
+            ]
+        },
         "shared-modules/libusb/libusb.json",
         {
             "name": "freerdp",
@@ -63,24 +79,8 @@
             "sources": [
                 {
                     "type": "archive",
-                    "url": "https://pub.freerdp.com/releases/freerdp-2.11.2.tar.gz",
-                    "sha256": "17e36553065cb59126f8fee987ec74783db50232b361574dac86b7a768dea3b4"
-                }
-            ]
-        },
-        {
-            "name": "libfuse",
-            "buildsystem": "meson",
-            "config-opts": [
-                "-Dexamples=false",
-                "-Dutils=false"
-            ],
-            "sources": [
-                {
-                    "type": "git",
-                    "url": "https://github.com/libfuse/libfuse.git",
-                    "tag": "fuse-3.16.1",
-                    "commit": "1f0dfae4084577997291bb0e1b94aeff89a5e70f"
+                    "url" : "https://pub.freerdp.com/releases/freerdp-3.6.3.tar.xz",
+                    "sha256" : "6704e9e63fd1823070814ba648c65f591f06468b3b433ea99807bd2dee550b92"
                 }
             ]
         },
