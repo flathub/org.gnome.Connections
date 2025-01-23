@@ -79,8 +79,8 @@
             "sources": [
                 {
                     "type": "archive",
-                    "url" : "https://pub.freerdp.com/releases/freerdp-3.6.3.tar.xz",
-                    "sha256" : "6704e9e63fd1823070814ba648c65f591f06468b3b433ea99807bd2dee550b92"
+                    "url": "https://pub.freerdp.com/releases/freerdp-3.6.3.tar.xz",
+                    "sha256": "6704e9e63fd1823070814ba648c65f591f06468b3b433ea99807bd2dee550b92"
                 }
             ]
         },
@@ -91,12 +91,12 @@
                 {
                     "type": "git",
                     "url": "https://gitlab.gnome.org/gnome/connections.git",
-                    "commit": "e47237ed667cc7a2c0bdf70e92255835fffd7dca",
+                    "commit": "8fe16876b0b2e762620be5e275cbd96fc9682fc7",
                     "x-checker-data": {
                         "type": "git",
                         "tag-pattern": "^([\\d.]+)$"
                     },
-                    "tag": "47.0"
+                    "tag": "47.2.1"
                 }
             ]
         }
