@@ -1,7 +1,7 @@
 {
     "app-id": "org.gnome.Connections",
     "runtime": "org.gnome.Platform",
-    "runtime-version": "47",
+    "runtime-version": "48",
     "sdk": "org.gnome.Sdk",
     "sdk-extensions": [
         "org.freedesktop.Sdk.Extension.vala"
@@ -56,8 +56,8 @@
                 {
                     "type": "git",
                     "url": "https://github.com/libfuse/libfuse.git",
-                    "tag": "fuse-3.16.1",
-                    "commit": "1f0dfae4084577997291bb0e1b94aeff89a5e70f"
+                    "tag": "fuse-3.16.2",
+                    "commit": "7a92727d97c10290b3501d86a194738973edb61d"
                 }
             ]
         },
@@ -79,8 +79,8 @@
             "sources": [
                 {
                     "type": "archive",
-                    "url": "https://pub.freerdp.com/releases/freerdp-3.6.3.tar.xz",
-                    "sha256": "6704e9e63fd1823070814ba648c65f591f06468b3b433ea99807bd2dee550b92"
+                    "url": "https://pub.freerdp.com/releases/freerdp-3.11.0.tar.xz",
+                    "sha256": "f955b9f284bd67510c931c93a78c0d85aead283afc46399e25cdf13a3f824969"
                 }
             ]
         },
@@ -90,13 +90,13 @@
             "sources": [
                 {
                     "type": "git",
-                    "url": "https://gitlab.gnome.org/gnome/connections.git",
-                    "commit": "8fe16876b0b2e762620be5e275cbd96fc9682fc7",
+                    "url": "https://gitlab.gnome.org/GNOME/gnome-connections.git",
+                    "commit": "7644534a83b019fd0a8a909ee48d618d2b28a363",
                     "x-checker-data": {
                         "type": "git",
                         "tag-pattern": "^([\\d.]+)$"
                     },
-                    "tag": "47.2.1"
+                    "tag": "48.0"
                 }
             ]
         }
