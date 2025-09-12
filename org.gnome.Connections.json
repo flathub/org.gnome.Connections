@@ -1,7 +1,7 @@
 {
     "app-id": "org.gnome.Connections",
     "runtime": "org.gnome.Platform",
-    "runtime-version": "48",
+    "runtime-version": "49",
     "sdk": "org.gnome.Sdk",
     "sdk-extensions": [
         "org.freedesktop.Sdk.Extension.vala"
@@ -83,8 +83,8 @@
             "sources": [
                 {
                     "type": "archive",
-                    "url": "https://pub.freerdp.com/releases/freerdp-3.11.0.tar.xz",
-                    "sha256": "f955b9f284bd67510c931c93a78c0d85aead283afc46399e25cdf13a3f824969"
+                    "url": "https://pub.freerdp.com/releases/freerdp-3.17.1.tar.xz",
+                    "sha256": "9e00f23589ca6cb73045cb9242213cf16580215854346ffe63a61170dbd6b27c"
                 }
             ]
         },
@@ -95,12 +95,12 @@
                 {
                     "type": "git",
                     "url": "https://gitlab.gnome.org/GNOME/gnome-connections.git",
-                    "commit": "7644534a83b019fd0a8a909ee48d618d2b28a363",
+                    "commit": "4cbfa5c1729fdf625e20c11a83538881d2737755",
                     "x-checker-data": {
                         "type": "git",
                         "tag-pattern": "^([\\d.]+)$"
                     },
-                    "tag": "48.0"
+                    "tag": "49.0"
                 }
             ]
         }
