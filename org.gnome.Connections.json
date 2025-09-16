@@ -174,7 +174,6 @@
                 }
             ]
         },
-        "shared-modules/libusb/libusb.json",
         {
             "name": "freerdp",
             "buildsystem": "cmake-ninja",
