@@ -3,13 +3,6 @@
     "runtime": "org.gnome.Platform",
     "runtime-version": "49",
     "sdk": "org.gnome.Sdk",
-    "sdk-extensions": [
-        "org.freedesktop.Sdk.Extension.vala"
-    ],
-    "build-options": {
-        "prepend-path": "/usr/lib/sdk/vala/bin",
-        "prepend-ld-library-path": "/usr/lib/sdk/vala/lib"
-    },
     "command": "gnome-connections",
     "finish-args": [
         "--share=network",
@@ -52,11 +45,6 @@
         {
             "name" : "spice-gtk",
             "buildsystem" : "meson",
-            "build-options" : {
-                "env" : {
-                    "PYTHONPATH" : "/app"
-                }
-            },
             "config-opts" : [
                 "-Dvapi=enabled",
                 "-Dwebdav=enabled",
@@ -68,7 +56,12 @@
                 {
                     "type" : "archive",
                     "url" : "https://www.spice-space.org/download/gtk/spice-gtk-0.42.tar.xz",
-                    "sha256" : "9380117f1811ad1faa1812cb6602479b6290d4a0d8cc442d44427f7f6c0e7a58"
+                    "sha256" : "9380117f1811ad1faa1812cb6602479b6290d4a0d8cc442d44427f7f6c0e7a58",
+                    "x-checker-data": {
+                        "type": "anitya",
+                        "project-id": 11576,
+                        "url-template": "https://www.spice-space.org/download/gtk/spice-gtk-$version.tar.xz"
+                    }
                 }
             ],
             "modules" : [
@@ -76,13 +69,22 @@
                     "name": "python-six",
                     "buildsystem": "simple",
                     "build-commands": [
-                        "pip3 install --target=/app six-1.10.0-py2.py3-none-any.whl"
+                        "pip3 install --no-index --find-links=\"file://${PWD}\" --prefix=${FLATPAK_DEST} six"
                     ],
                     "sources": [
                         {
-                           "type": "file",
-                           "url": "https://pypi.python.org/packages/c8/0a/b6723e1bc4c516cb687841499455a8505b44607ab535be01091c0f24f079/six-1.10.0-py2.py3-none-any.whl#md5=3ab558cf5d4f7a72611d59a81a315dc8",
-                           "sha256": "0ff78c403d9bccf5a425a6d31a12aa6b47f1c21ca4dc2573a7e2f32a97335eb1"
+                            "type": "file",
+                            "url": "https://files.pythonhosted.org/packages/94/e7/b2c673351809dca68a0e064b6af791aa332cf192da575fd474ed7d6f16a2/six-1.17.0.tar.gz",
+                            "sha256": "ff70335d468e7eb6ec65b95b99d3a2836546063f63acc5171de367e834932a81",
+                            "x-checker-data": {
+                                "type": "pypi",
+                                "name": "six"
+                            }
+                        },
+                        {
+                            "type": "file",
+                            "url": "https://files.pythonhosted.org/packages/source/s/setuptools/setuptools-75.6.0.tar.gz",
+                            "sha256": "8199222558df7c86216af4f84c30e9b34a61d8ba19366cc914424cdbd28252f6"
                         }
                     ]
                 },
@@ -92,8 +94,13 @@
                     "sources" : [
                         {
                             "type" : "archive",
-                            "url" : "https://www.spice-space.org/download/releases/spice-protocol-0.14.3.tar.xz",
-                            "sha256" : "f986e5bc2a1598532c4897f889afb0df9257ac21c160c083703ae7c8de99487a"
+                            "url" : "https://gitlab.freedesktop.org/spice/spice-protocol/-/archive/v0.14.5/spice-protocol-v0.14.5.tar.gz",
+                            "sha256" : "1be179b3dfbb23946432275f4b7a4b59bb5e9acc25c3128bc930b8264a9f0a20",
+                            "x-checker-data": {
+                                "type": "anitya",
+                                "project-id": 14892,
+                                "url-template": "https://gitlab.freedesktop.org/spice/spice-protocol/-/archive/v$version/spice-protocol-v$version.tar.gz"
+                            }
                         }
                     ]
                 },
@@ -101,8 +108,7 @@
                     "name" : "phodav",
                     "buildsystem" : "meson",
                     "config-opts" : [
-                        "-Dsystemdsystemunitdir=/app/lib/systemd/system",
-                        "-Dudevrulesdir=usr/lib/udev/rules.d"
+                        "-Dgtk_doc=disabled"
                     ],
                     "sources" : [
                         {
@@ -120,7 +126,7 @@
                     "name" : "python-pyparsing",
                     "buildsystem" : "simple",
                     "build-commands" : [
-                        "pip3 install --prefix=/app pyparsing-2.4.6-py2.py3-none-any.whl"
+                        "pip3 install --no-index --find-links=\"file://${PWD}\" --prefix=${FLATPAK_DEST} pyparsing"
                     ],
                     "sources" : [
                         {
@@ -136,7 +142,12 @@
                         {
                             "type" : "archive",
                             "url" : "https://www.spice-space.org/download/libcacard/libcacard-2.8.1.tar.xz",
-                            "sha256" : "fbbf4de8cb7db5bdff5ecb672ff0dbe6939fb9f344b900d51ba6295329a332e7"
+                            "sha256" : "fbbf4de8cb7db5bdff5ecb672ff0dbe6939fb9f344b900d51ba6295329a332e7",
+                            "x-checker-data": {
+                                "type": "anitya",
+                                "project-id": 18776,
+                                "url-template": "https://www.spice-space.org/download/libcacard/libcacard-$version.tar.xz"
+                            }
                         }
                     ]
                 },
@@ -151,8 +162,13 @@
                     "sources" : [
                         {
                             "type" : "archive",
-                            "url" : "https://www.spice-space.org/download/releases/spice-0.15.1.tar.bz2",
-                            "sha256" : "ada9af67ab321916bd7eb59e3d619a4a7796c08a28c732edfc7f02fc80b1a37a"
+                            "url" : "https://www.spice-space.org/download/releases/spice-0.16.0.tar.bz2",
+                            "sha256" : "0a6ec9528f05371261bbb2d46ff35e7b5c45ff89bb975a99af95a5f20ff4717d",
+                            "x-checker-data": {
+                                "type": "anitya",
+                                "project-id": 4871,
+                                "url-template": "https://www.spice-space.org/download/releases/spice-$version.tar.bz2"
+                            }
                         }
                     ]
                 }
@@ -169,8 +185,12 @@
                 {
                     "type": "git",
                     "url": "https://github.com/libfuse/libfuse.git",
-                    "tag": "fuse-3.16.2",
-                    "commit": "7a92727d97c10290b3501d86a194738973edb61d"
+                    "tag": "fuse-3.18.1",
+                    "commit": "2a6da8cb338b1718e899240d1d43d52e311e504a",
+                    "x-checker-data": {
+                        "type": "git",
+                        "tag-pattern": "^fuse-([\\d.]+)$"
+                    }
                 }
             ]
         },
@@ -193,7 +213,12 @@
                 {
                     "type": "archive",
                     "url": "https://pub.freerdp.com/releases/freerdp-3.17.1.tar.xz",
-                    "sha256": "9e00f23589ca6cb73045cb9242213cf16580215854346ffe63a61170dbd6b27c"
+                    "sha256": "9e00f23589ca6cb73045cb9242213cf16580215854346ffe63a61170dbd6b27c",
+                    "x-checker-data": {
+                        "type": "anitya",
+                        "project-id": "10442",
+                        "url-template": "https://pub.freerdp.com/releases/freerdp-3.17.1.tar.xz"
+                    }
                 }
             ]
         },
