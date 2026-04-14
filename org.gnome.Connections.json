@@ -185,8 +185,8 @@
                 {
                     "type": "git",
                     "url": "https://github.com/libfuse/libfuse.git",
-                    "tag": "fuse-3.18.1",
-                    "commit": "2a6da8cb338b1718e899240d1d43d52e311e504a",
+                    "tag": "fuse-3.18.2",
+                    "commit": "033844748010a3b8265bf1c90b9ae8ffe4cd9ca7",
                     "x-checker-data": {
                         "type": "git",
                         "tag-pattern": "^fuse-([\\d.]+)$"
