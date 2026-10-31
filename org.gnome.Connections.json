@@ -216,8 +216,8 @@
                     "sha256": "9e00f23589ca6cb73045cb9242213cf16580215854346ffe63a61170dbd6b27c",
                     "x-checker-data": {
                         "type": "anitya",
-                        "project-id": "10442",
-                        "url-template": "https://pub.freerdp.com/releases/freerdp-3.17.1.tar.xz"
+                        "project-id": 10442,
+                        "url-template": "https://pub.freerdp.com/releases/freerdp-$version.tar.xz"
                     }
                 }
             ]
